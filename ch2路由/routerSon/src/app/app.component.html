@@ -1,0 +1,6 @@
+<h1>主页</h1>
+<a href="" routerLink = "/home" >回主页</a>&nbsp;&nbsp;
+<button  (click)="goHome()">返回主页</button>&nbsp;&nbsp;
+<a href="" routerLink = "/product" [queryParams]="{id:1}">查看商品1</a>&nbsp;&nbsp;
+<a href="" [routerLink] = '["/product2",2]'  >查看商品2</a>&nbsp;&nbsp;
+<router-outlet></router-outlet>

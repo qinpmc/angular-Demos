@@ -1,0 +1,9 @@
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+<!--  routerLink 中采用 / 表示根路由-->
+  <a href="" [routerLink]="['/']">主页</a> &nbsp;&nbsp;
+  <a href="" [routerLink]="['/product']">产品页</a>
+  <input type="button" value="商品详情" (click) ="toProduct()">
+<!--路由插座-->
+<router-outlet></router-outlet>

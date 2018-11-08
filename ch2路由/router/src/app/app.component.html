@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div>
+<a href="" routerLink="/">主页</a>&nbsp;&nbsp;
+<!--第一种参数传递-->
+<a href="" routerLink="/product" [queryParams]="{id:1}">商品详情</a> &nbsp;&nbsp;
+
+<!--第二种参数传递--  toShopDetails 方法调用 router.navigate 传参-->
+<input type="button" value="查看商店详情" (click)="toShopDetails()">&nbsp;&nbsp;
+
+<!--第二种参数传递-->
+<a href="" [routerLink]='["/shop",99]'>商店详情</a>
+
+<router-outlet></router-outlet>
