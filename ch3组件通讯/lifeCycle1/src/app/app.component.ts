@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lifeCycle1';
+
+  greeting:string = "父组件的greeting";
+
+  user:{name:string} = {name:"父组件的userName=Tom"};
+
 }

@@ -1,1 +1,11 @@
+<!--测试组件生命周期-->
 <app-life [name]="title"></app-life>
+
+<!--测试ngOnChanges-->
+<div>
+  <input type="text" [(ngModel)]="greeting">
+</div>
+<div>
+  <input type="text" [(ngModel)]="user.name">
+</div>
+<app-child [greeting]="greeting" [user]="user" ></app-child>

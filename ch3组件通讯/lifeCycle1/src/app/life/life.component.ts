@@ -11,44 +11,44 @@ export class LifeComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,
   @Input()
   name:string;
   logIt(msg:string){
-    console.log(`#${logIndex++} ${msg}`);
+    //console.log(`#${logIndex++} ${msg}`);
   }
 
   constructor() {
-    this.logIt("name属性在构造函数里的值是："+name);
+    //this.logIt("name属性在构造函数里的值是："+name);
   }
 
   ngOnInit() {
-    this.logIt("ngOnInit");
+    //this.logIt("ngOnInit");
   }
 
   ngOnChanges(changes:SimpleChanges):void {
    let name = changes["name"].currentValue;
-    this.logIt("name 在ngOnchanges 里面的值是："+name);
+    //this.logIt("name 在ngOnchanges 里面的值是："+name);
   }
 
   ngDoCheck():void {
-    this.logIt("ngDoCheck");
+    //this.logIt("ngDoCheck");
   }
 
   ngAfterContentInit():void {
-    this.logIt("ngAfterContentInit");
+    //this.logIt("ngAfterContentInit");
   }
 
   ngAfterContentChecked():void {
-    this.logIt("ngOnInit");
+    //this.logIt("ngAfterContentChecked");
   }
 
   ngAfterViewInit():void {
-    this.logIt("ngAfterViewInit");
+    //this.logIt("ngAfterViewInit");
   }
 
   ngAfterViewChecked():void {
-    this.logIt("ngAfterViewChecked");
+    //this.logIt("ngAfterViewChecked");
   }
 
   ngOnDestroy():void {
-    this.logIt("ngOnDestroy");
+    //this.logIt("ngOnDestroy");
   }
 
 
@@ -58,12 +58,12 @@ export class LifeComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,
    #3 ngOnInit
    #4 ngDoCheck
    #5 ngAfterContentInit
-   #6 ngOnInit
+   #6 ngAfterContentChecked
    #7 ngAfterViewInit
    #8 ngAfterViewChecked
    core.js:13689 Angular is running in the development mode. Call enableProdMode() to enable the production mode.
    #9 ngDoCheck
-   #10 ngOnInit
+   #10 ngAfterContentChecked
    #11 ngAfterViewChecked
    */
 }
