@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LifeComponent } from './life/life.component';
 import { ChildComponent } from './child/child.component';
+import { Child2Component } from './child2/child2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LifeComponent,
-    ChildComponent
+    ChildComponent,
+    Child2Component
   ],
   imports: [
     BrowserModule,
