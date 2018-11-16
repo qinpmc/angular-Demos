@@ -4,3 +4,14 @@
 <button (click)="child2_2.greeting('页面调用子组件方法')">调用子组件方法</button>
 
 {{greeting}}
+
+<hr>
+<!--以下为ng-content 示例-->
+
+<app-child3>
+  <div>这是父组件映射到 child3 的内容div</div>
+  {{greeting}}
+  <div class="header"> 父组件投影到子组件 header</div>
+  <div name="footer"> 父组件投影到子组件 footer</div>
+</app-child3>
+
