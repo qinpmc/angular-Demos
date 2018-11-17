@@ -30,4 +30,6 @@ export class AppComponent implements OnInit,AfterViewInit,AfterViewChecked  {
     console.log("父组件ngAfterViewChecked"); //上文定时器执行一次，此方法执行一次
   }
 
+  divContent:string = '<p style="background: blue">这是innerHTML内容()!</p>'
+
 }
