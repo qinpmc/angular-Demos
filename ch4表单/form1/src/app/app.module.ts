@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
-import { HttpModule } from '@angular/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +14,6 @@ import { HttpModule } from '@angular/http'
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,19 @@
-<form #myForm (ngSubmit)="onSubmit(myForm.value)">
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
   <div>用户名：<input type="text" ngModel name="username"></div>
   <div>手机号：<input type="number" ngModel name="mobile"></div>
-  <!--<div ngModelGroup="pwdGroup">
+  <div ngModelGroup="pwdGroup">
     <div>密码：<input type="password" ngModel name="pwd"></div>
     <div>确认密码：<input type="password" ngModel name="pwdConfirm"></div>
-  </div>-->
+  </div>
   <button type="submit">注册</button>
 </form>
+
+
+<!--
+{username: "qqq", mobile: 123, pwdGroup: {…}}
+mobile:123
+pwdGroup:
+  pwd:"333"
+  pwdConfirm:"333"
+username:"qqq"
+-->
