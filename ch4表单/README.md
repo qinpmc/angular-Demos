@@ -53,3 +53,31 @@ formGroupName/formControlName/formArrayName 只指定名称即可，只能用在
      ...
 </form>
 ```
+
+
+- FormBuilder
+
+```
+ formModel:FormGroup;
+  /*constructor() {
+    this.formModel = new FormGroup({
+      username:new FormControl(),
+      mobile:new FormControl(),
+      pwdGroup:new FormGroup({
+        password:new FormControl(),
+        passwordConfirm:new FormControl()
+      })
+    })
+  }*/
+  constructor(fb:FormBuilder){
+    this.formModel =fb.group({
+      username:[''],
+      mobile:[''],
+      pwdGroup:fb.group({
+        password:[''],
+        passwordConfirm:['']
+      })
+    })
+  }
+```
+ 
