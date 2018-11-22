@@ -36,6 +36,9 @@ export class FormBuilderComponent implements OnInit {
     console.log(this.formModel.value)
     let isUsernameValid :boolean = this.formModel.get("username").valid;
     console.log(isUsernameValid);
+    let errors:any = this.formModel.get("username").errors;
+    console.log(errors);
+
   }
 /*  validMyform(control:AbstractControl):{[key:string]:any}{
     return null;
@@ -48,8 +51,8 @@ export class FormBuilderComponent implements OnInit {
   }
 
   equalValidate(group:FormGroup):any{
-    let pwd:FormControl = group.get("password");
-    let passwordConfirm:FormControl = group.get("passwordConfirm");
+    let pwd:FormControl = group.get("password") as FormControl;
+    let passwordConfirm:FormControl = group.get("passwordConfirm") as FormControl;
     let valid:boolean = (pwd.value ===passwordConfirm.value);
     console.log("密码相同验证结果："+valid);
     return valid? null:{equal:true};
