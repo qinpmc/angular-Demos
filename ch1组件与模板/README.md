@@ -95,6 +95,7 @@ doOnInput(event){
 - 名字相同，HTML属性和DOM属性也不是同一样东西。
 - HTML 属性的值指定了初始值；DOM属性的值表示当前值。 DOM属性的值可以改变；HTML属性的值不能改变。
 - 模板绑定是DOM属性和事件来工作的，而不是HTML属性
+
 #### HTML属性绑定
 1. 基本HTML属性绑定 <td [attr.colspan] ="tableColspan"> SOmething
 
@@ -199,5 +200,14 @@ onKey(value){
 
 ```
 
+### 用户输入
+keyup.enter  --输入enter键响应事件
 
 
+```
+<input type="text" #newHero (keyup.enter)="addHero(newHero.value)" (blur)="addHero(newHero.value);newHero.value='' ">
+<button (click)="addHero(newHero.value)">Add</button>
+<ul>
+  <li *ngFor="let hero of heroes">{{hero}}</li>
+</ul>
+```
